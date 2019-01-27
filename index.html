@@ -23,18 +23,50 @@
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
+			<div class="slides", style="width: 100%; height: 700px; zoom: 1.3;">
 				<section>
-					<h2>Welcome to ISD BSO</h2>
+					<h2>Welcome to Umobile ISD BSO</h2>
 					<h3>Introduction to Prometheus</h3>
 					<p>
 						<small>Created by HK.TAN</a></small>
 					</p>
 				</section>
-				<section>
-					<p>
-					<span class="fragment">Promethues is a open soucre monitoring tools</span>
-					</p>
+			<section style="text-align: left;">
+					<p>Promethues is an <span class="fragment highlight-blue">Open soucre monitoring</span> solution</p>
+					<ul>
+						<span style="display: inline-block;" class="fragment fade-right"><li>Started at SoundCloud around 2012-2013, and was made public in early 2015</li></span>
+						<span style="display: inline-block;" class="fragment fade-right"><li>Prometheus provide Metrics & Alerting</li></span>
+						<span style="display: inline-block;" class="fragment fade-right"><li>It it inspired by Google's Borgman, which use time-series data as a datasource, to then send alerts based on this data</li></span>
+						<span style="display: inline-block;" class="fragment fade-right"><li>It fits very well in the cloud native infrastructure.</li></span>
+						<span style="display: inline-block;" class="fragment fade-right"><li>Prometheus is also a member of the CNCF (Cloud Native Foundation)</li></span>
+					</ul>
+			</section>
+
+			<section style="text-align: left;">
+				<ul>
+				Prometheus, We talk about dimensional data: times series are indentified by metric name and a set of key/value pairs
+						<table>
+								<thead>
+												<tr>
+													<th>Metric Name</th>
+													<th>Lable</th>
+													<th>Smaple</th>
+												</tr>
+								</thead>
+											<tbody>
+												<tr>
+													<td>Temperature</td>
+													<td>Location = outside</td>
+													<td>90</td>
+												</tr>
+											</tbody>
+						</table>
+					<span style="display: inline-block;" class="fragment fade-right"><li>Prometheus includes a Flexible Query Language </li></span>
+					<span style="display: inline-block;" class="fragment fade-right"><li>Visualizations can be shown using build-in expresssion browser or with integration like Grafana</li></span>
+					<span style="display: inline-block;" class="fragment fade-right"><li>It stores metrics in memory and local disk in a own custom, efficient format.</li></span>
+					<span style="display: inline-block;" class="fragment fade-right"><li>Many client libraries and integration available</li></span>
+					<span style="display: inline-block;" class="fragment fade-right"><li>It is written in GO.</li></span>
+				</ul>
 			</section>
 			</div>
 		</div>
