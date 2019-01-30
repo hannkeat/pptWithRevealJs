@@ -1593,3 +1593,11 @@ body {
 .column{
   display: inline-block;
 }
+
+.column ul li {
+  padding: 10px;
+}
+
+.slidescustom{
+  top: 130px
+}

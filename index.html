@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>ISD BSO</title>
@@ -71,7 +72,7 @@
 
 			<section style:top:"-180px; display: block"; style:"0"> -->
 				<section style="display: block">
-					<h2> multigraph</h2>
+					<!-- <h2> multigraph</h2> -->
 				<!--<svg width="200" height="150" class="call_flow">
 				<svg width="200" height="150" style="border:solid 1px" class="call_flow"> <text x="30%" y="50%" textanchor="middle">blabla</text>
 
@@ -117,16 +118,40 @@
 										<text x="275" y="250" class="small">Prometheus</text>
 
 										<path d="M145,145 A 200 200, 0, 0, 1, 250 225" stroke="green" fill="none" />
-										<path d="M145,50 A  200 200, 0, 0, 1, 250 225" stroke="green" fill="none" />
+										<path d="M145,50 A  250 250, 0, 0, 1, 250 225" stroke="green" fill="none" />
 										<path d="M145,225 A  200 200, 0, 0, 1, 250 225" stroke="green" fill="none" />
 						</svg>
 					</div>
 
 					<div class="column" style="width: 45%; vertical-align: top; font-size: .7em; margin-left: 1em;">
-						<p class="txt">
-							The set of vertices, edge labels and edges for this multigraph are
-						</p>
+						<ul style="display:block;font-size:18px;padding:5px">
+							<li>Prometheus collect metrics from monitored target by scraping metrics HTTP endpoints</li>
+							<li>This is fundamentally different than other monitoring and alert system</li>
+							<li>Rather than using customem scripts that check on particular services and systems, the monitoring data itself used</li>
+							<li>Scraping endpoints is much more efficient than other mechanisms, like third party agents</li>
+							<li>A single Prometheus server is able to ingest up to 1mil sample per second as several million time series</li>
+						</ul>
 					</div>
+			</section>
+
+
+			<section class="slidescustom">
+				<h3>Prometheus installation</h3>
+				<p><a href="https://github.com/prometheus/prometheus/releases">Github respository</a></p>
+				<p><small><li>
+					MacOS, Windows, Linux and some UNIX distributions are supported. </li></small>
+
+					<small><li> Execute command in linux will be like </li></small></p>
+					<pre>
+						<code class="hljs linux" data-trim contenteditable>
+./prometheus --config.file /path/to/Prometheus
+						</code>
+					</pre>
+
+
+
+
+
 			</section>
 			</div>
 		</div>
@@ -139,7 +164,12 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				controls: true,
+				// progress: true,
+				// history: true,
+				// center: true,
 				dependencies: [
+					//{ src: 'lib/js/classList.js', condition:function(){ return !document.body.classList;}},
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
