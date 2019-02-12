@@ -32,7 +32,7 @@
 						<small>Created by HK.TAN</a></small>
 					</p>
 				</section>
-		<!--	<section style="text-align: left;">
+			<section style="text-align: left;">
 					<p>Promethues is an <span class="fragment highlight-blue">Open soucre monitoring</span> solution</p>
 					<ul>
 						<span style="display: inline-block;" class="fragment fade-right"><li>Started at SoundCloud around 2012-2013, and was made public in early 2015</li></span>
@@ -70,9 +70,9 @@
 				</ul>
 			</section>
 
-			<section style:top:"-180px; display: block"; style:"0"> -->
+			<!--<section style:top:"-180px; display: block"; style:"0"> -->
 				<section style="display: block">
-					<!-- <h2> multigraph</h2> -->
+					<h3>Prometheus Overview</h3>
 				<!--<svg width="200" height="150" class="call_flow">
 				<svg width="200" height="150" style="border:solid 1px" class="call_flow"> <text x="30%" y="50%" textanchor="middle">blabla</text>
 
@@ -123,7 +123,7 @@
 						</svg>
 					</div>
 
-					<div class="column" style="width: 45%; vertical-align: top; font-size: .7em; margin-left: 1em;">
+					<div class="column" style="width: 45%; vertical-align: top; font-size: 1em; margin-left: 1em;">
 						<ul style="display:block;font-size:18px;padding:5px">
 							<li>Prometheus collect metrics from monitored target by scraping metrics HTTP endpoints</li>
 							<li>This is fundamentally different than other monitoring and alert system</li>
@@ -147,12 +147,252 @@
 ./prometheus --config.file /path/to/Prometheus
 						</code>
 					</pre>
-
-
-
-
-
 			</section>
+
+
+			<section class="slidescustom">
+				<h3>Official Exporter</h3>
+				<div class="column" style="width: 50%;">
+					<ul style="display:block;font-size:18px;padding:5px">
+						<li>Consul</li>
+						<li>Memcached</li>
+						<li>MySql Database</li>
+						<li>Node/System</li>
+						<li>HAproxy</li>
+						<li>AWS CloudWatch</li>
+					</ul>
+				</div>
+
+
+				<div class="column" style="width: 40%; vertical-align: top; font-size: 18px; margin-left: 1em;">
+					<ul>
+						<li>Collectd</li>
+						<li>Graphite</li>
+						<li>Statsd</li>
+						<li>JMX</li>
+						<li>influxDB</li>
+						<li>SNMP</li>
+						<li>BlackBox</li>
+					</ul>
+				</div>
+
+				<div>
+				<p><a href="https://prometheus.io/docs/instrumenting/exporters/">Link</a></p>
+				</div>
+			</section>
+
+			<section class="slidescustom">
+				<h3>Node Exporter</h3>
+				<div class="row" style="width: 100%;">
+					<ul style="display:block;font-size:18px">
+						<li>Linux metrics</li>
+						<li>Include: CPU, memory, diskspace, networking, load, time and etc.</li>
+						<li>Node Exporter can be used to monitor machines, and later on, we can create alerts based on these ingested metrics</li>
+						<li>It support Windows as well, called <strong>WIM Exporter</strong></li>
+					</ul>
+
+					<div class="column" style="width: 100%;">
+						<svg class="directGraph" width="900" height="300">
+						<!--	<svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+								<style>
+								.small { font: italic 13px sans-serif; }
+								.heavy { font: bold 18px sans-serif; }
+
+								/* Note that the color of the text is set with the    *
+								 * fill property, the color property is for HTML only */
+								.Rrrrr { font: italic 40px serif; fill: red; }
+								</style>
+							<text x="65" y="55" class="Rrrrr">Grumpy!</text>
+							<text x="20" y="35" class="small">My</text>
+							<text x="40" y="35" class="heavy">cat</text>
+							<text x="55" y="55" class="small">is</text>-->
+										<style>
+										.small { font: bold 11px sans-serif; }
+										</style>
+
+										<defs>
+    									<!--<marker id="arrow" markerWidth="1" markerHeight="1" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">-->
+											<marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 10">
+      									<path d="M0,0 L0,6 L9,3 z" fill="#f00" />
+    									</marker>
+  									</defs>
+
+								<rect x ="100" y="20" width="180" height="110" style="fill:None;stroke:black"></rect>
+										<text x="00" y="55" class="small">Linux machine</text>
+										<path d="M280,65 A 0 0, 0, 0, 1, 600 137" stroke="black" fill="none" marker-end="url(#arrow)"/>
+								<rect x ="120" y="40" width="100" height="80" style="fill:None;stroke:blue"></rect>
+										<text x="130" y="85" class="small">Node Exporter</text>
+								<rect x ="210" y="80" width="60" height="25" style="fill:orange;stroke:orange"></rect>
+										<text x="215" y="95" class="small">HTTP</text>
+
+
+								<rect x ="100" y="150" width="180" height="110" style="fill:None;stroke:black"></rect>
+										<text x="00" y="175" class="small">Window machine</text>
+										<path d="M280,195 A 0 0, 0, 0, 1, 600 143" stroke="black" fill="none" marker-end="url(#arrow)" />
+								<rect x ="120" y="170" width="100" height="80" style="fill:None;stroke:blue"></rect>
+										<text x="130" y="215" class="small">Node Exporter</text>
+								<rect x ="210" y="210" width="60" height="25" style="fill:orange;stroke:orange"></rect>
+										<text x="215" y="225" class="small">HTTP</text>
+
+								<rect x ="610" y="100" width="180" height="80" style="fill:None;stroke:black"></rect>
+										<text x="660" y="140" class="small">Prometheus</text>
+						</svg>
+					</section>
+
+						<section class="slidescustom">
+							<h3>Blackbox Exporter</h3>
+							<div class="column" style="width: 100%;">
+								<ul style="display:block;font-size:18px;padding:5px">
+									<li>HTTP, DNS, TCP sockets, ICMP.....</li>
+									<li>HTTP prober to "GET" respond from HTTP server</li>
+									<li>This can be monitor if HTTP server is up</li>
+									<li>Monitor HTTP SSL cert expiry, alert can be create</li>
+									<li>API monitoring, blackbox exporter can be use to send/simulate HTTP request and getting respond from API</li>
+									<li>AWS CloudWatch</li>
+								</ul>
+							</div>
+
+						</section>
+
+						<section class="slidescustom">
+							<h3>MySQL Exporter</h3>
+							<div class="column" style="width: 100%;">
+								<svg class="directGraph" width="900" height="300">
+										<style>
+											.smalls { font: bold 15px sans-serif; }
+										</style>
+
+  									<ellipse cx="100" cy="50" rx="100" ry="40" style="fill:None; stroke:black;stroke-width: 1" />
+										<path d="M205,50 A 200 200, 0, 0, 1, 445 140" stroke="black" fill="none" marker-end="url(#arrow)" />
+										<path d="M445,140 A 200 200, 0, 0, 0, 205 50" stroke="black" fill="none" marker-end="url(#arrow)" />
+										<text x="50" y="50" class="smalls">MySQL service</text>
+										<text x="350" y="50" class="small">SQL queries (dedicated user)</text>
+
+										<ellipse cx="550" cy="150" rx="100" ry="40" style="fill:None; stroke:black;stroke-width: 1" />
+										<text x="500" y="150" class="smalls">MySQL exporter</text>
+										<text x="350" y="300" class="smalls">Store with additional metadata</text>
+										<path d="M465,280 A 200 200, 0, 0, 1, 475 190" stroke="black" fill="none" marker-end="url(#arrow)" />
+										<text x="280" y="210" class="small">GET /prometheus (http query)</text>
+										<path d="M495,190 A 200 200, 0, 0, 1, 485 280" stroke="black" fill="none" marker-end="url(#arrow)" />
+										<text x="500" y="260" class="small">Plain text response</text>
+										<p><img src="https://prometheus.io/assets/favicons/favicon.ico" align="middle" style="border:none"></p>
+								</svg>
+							</div>
+						</section>
+
+						<section class="slidescustom">
+							<h3>Grafana</h3>
+							<div class="column" style="width: 100%;">
+								<ul style="display:block;font-size:18px;padding:5px">
+									<li>Rather than using UI, we can also yml and json files to provision Grafana with datasources and dashboards</li>
+									<li>We can test new dashboard first on dev or testbed, then import newly created dashboard to production.</li>
+										<ul>
+											<li>import manually though UI, or using yml and json file.</li>
+											<li>When using files, we can keep the files within version control to keep changes, revisions and backups.</li>
+										</ul>
+								</ul>
+							</div>
+						</section>
+
+
+						<section class="slidescustom">
+							<h3>Alerting</h3>
+							<div class="row" style="width: 100%;">
+								<ul style="display:block;font-size:18px">
+									<li>Alerting Rules in Prometheus Server</li>
+									<li>Alertmanager</li>
+								</ul>
+
+								<div class="column" style="width: 100%;">
+									<svg class="directGraph" width="900" height="300">
+													<style>
+													.small { font: bold 11px sans-serif; }
+													</style>
+
+													<defs>
+														<marker id="arrows" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 10">
+															<path d="M0,0 L0,6 L9,3 z" fill="#f00" />
+														</marker>
+													</defs>
+
+											<rect x ="00" y="60" width="80" height="50" style="fill:Orange;stroke:black"></rect>
+													<text x="20" y="85" class="small">Email</text>
+
+											<rect x ="00" y="160" width="80" height="50" style="fill:Orange;stroke:black"></rect>
+													<text x="10" y="185" class="small">Telegram</text>
+											<ellipse cx="250" cy="125" rx="50" ry="20" style="fill:Orange; stroke:black;stroke-width: 1" />
+													<text x="220" y="130" class="small">Webhook</text>
+
+											<rect x ="450" y="20" width="250" height="100" style="fill:none;stroke:black"></rect>
+													<rect x ="470" y="30" width="80" height="20" style="fill:none;stroke:black"></rect>
+													<text x="480" y="40" class="small">Receiver</text>
+													<path d="M470,40 A 0 0, 0, 0, 1, 86 80" stroke="black" fill="none" marker-end="url(#arrows)" />
+													<path d="M470,40 A 0 0, 0, 0, 1, 305 120" stroke="black" fill="none" marker-end="url(#arrows)" />
+													<path d="M200,125 A 0 0, 0, 0, 1, 85 180" stroke="black" fill="none" marker-end="url(#arrows)" />
+
+													<rect x ="470" y="90" width="80" height="20" style="fill:none;stroke:black"></rect>
+													<text x="480" y="100" class="small">Routes</text>
+													<text x="550" y="70" class="smalls">Alertmanager</text>
+													<text x="505" y="150" class="small" style="fill:red">Push Alert</text>
+
+
+
+											<rect x ="450" y="170" width="250" height="100" style="fill:none;stroke:black"></rect>
+													<rect x ="470" y="180" width="60" height="20" style="fill:none;stroke:black"></rect>
+													<text x="480" y="190" class="small">Rule 1</text>
+													<path d="M500,180 A 0 0, 0, 0, 1, 500 117" stroke="black" fill="none" marker-end="url(#arrows)" />
+
+
+
+
+
+
+													<rect x ="550" y="180" width="60" height="20" style="fill:none;stroke:black"></rect>
+													<text x="560" y="190" class="small">Rule 2</text>
+
+													<rect x ="630" y="180" width="60" height="20" style="fill:none;stroke:black"></rect>
+													<text x="640" y="190" class="small">Rule 3</text>
+													<text x="550" y="240" class="smalls">Prometheus Server</text>
+<!--													<path d="M280,65 A 0 0, 0, 0, 1, 600 137" stroke="black" fill="none" marker-end="url(#arrow)"/>
+											<rect x ="120" y="40" width="100" height="80" style="fill:None;stroke:blue"></rect>
+													<text x="130" y="85" class="small">Node Exporter</text>
+											<rect x ="210" y="80" width="60" height="25" style="fill:orange;stroke:orange"></rect>
+													<text x="215" y="95" class="small">HTTP</text>
+
+
+											<rect x ="100" y="150" width="180" height="110" style="fill:None;stroke:black"></rect>
+													<text x="00" y="175" class="small">Window machine</text>
+													<path d="M280,195 A 0 0, 0, 0, 1, 600 143" stroke="black" fill="none" marker-end="url(#arrow)" />
+											<rect x ="120" y="170" width="100" height="80" style="fill:None;stroke:blue"></rect>
+													<text x="130" y="215" class="small">Node Exporter</text>
+											<rect x ="210" y="210" width="60" height="25" style="fill:orange;stroke:orange"></rect>
+													<text x="215" y="225" class="small">HTTP</text>
+
+											<rect x ="610" y="100" width="180" height="80" style="fill:None;stroke:black"></rect>
+													<text x="660" y="140" class="small">Prometheus</text>-->
+									</svg>
+
+								</section>
+
+
+								<section class="slidescustom">
+									<h3>Demo</h3>
+									<div class="column" style="width: 100%;">
+										<ul style="display:block;font-size:18px;padding:5px">
+											<li>Monitor SOA API</li>
+											<li>Monitor MySQL Database</li>
+											<li>Monitor server hardware</li>
+											<li>Send Alert to telegram</li>
+										</ul>
+									</div>
+								</section>
+
+					</div>
+				</div>
+
+
+
+
 			</div>
 		</div>
 
