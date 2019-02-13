@@ -51,7 +51,7 @@
 												<tr>
 													<th>Metric Name</th>
 													<th>Lable</th>
-													<th>Smaple</th>
+													<th>Sample</th>
 												</tr>
 								</thead>
 											<tbody>
@@ -124,10 +124,10 @@
 					</div>
 
 					<div class="column" style="width: 45%; vertical-align: top; font-size: 1em; margin-left: 1em;">
-						<ul style="display:block;font-size:18px;padding:5px">
+						<ul style="display:block;font-size:23px;padding:5px">
 							<li>Prometheus collect metrics from monitored target by scraping metrics HTTP endpoints</li>
 							<li>This is fundamentally different than other monitoring and alert system</li>
-							<li>Rather than using customem scripts that check on particular services and systems, the monitoring data itself used</li>
+							<li>Rather than using custom scripts that check on particular services and systems, the monitoring data itself used</li>
 							<li>Scraping endpoints is much more efficient than other mechanisms, like third party agents</li>
 							<li>A single Prometheus server is able to ingest up to 1mil sample per second as several million time series</li>
 						</ul>
@@ -153,7 +153,7 @@
 			<section class="slidescustom">
 				<h3>Official Exporter</h3>
 				<div class="column" style="width: 50%;">
-					<ul style="display:block;font-size:18px;padding:5px">
+					<ul style="display:block;font-size:23px;padding:5px">
 						<li>Consul</li>
 						<li>Memcached</li>
 						<li>MySql Database</li>
@@ -164,7 +164,7 @@
 				</div>
 
 
-				<div class="column" style="width: 40%; vertical-align: top; font-size: 18px; margin-left: 1em;">
+				<div class="column" style="width: 40%; vertical-align: top; font-size: 23px; margin-left: 1em;">
 					<ul>
 						<li>Collectd</li>
 						<li>Graphite</li>
@@ -184,7 +184,7 @@
 			<section class="slidescustom">
 				<h3>Node Exporter</h3>
 				<div class="row" style="width: 100%;">
-					<ul style="display:block;font-size:18px">
+					<ul style="display:block;font-size:23px">
 						<li>Linux metrics</li>
 						<li>Include: CPU, memory, diskspace, networking, load, time and etc.</li>
 						<li>Node Exporter can be used to monitor machines, and later on, we can create alerts based on these ingested metrics</li>
@@ -242,7 +242,7 @@
 						<section class="slidescustom">
 							<h3>Blackbox Exporter</h3>
 							<div class="column" style="width: 100%;">
-								<ul style="display:block;font-size:18px;padding:5px">
+								<ul style="display:block;font-size:23px;padding:5px">
 									<li>HTTP, DNS, TCP sockets, ICMP.....</li>
 									<li>HTTP prober to "GET" respond from HTTP server</li>
 									<li>This can be monitor if HTTP server is up</li>
@@ -283,7 +283,7 @@
 						<section class="slidescustom">
 							<h3>Grafana</h3>
 							<div class="column" style="width: 100%;">
-								<ul style="display:block;font-size:18px;padding:5px">
+								<ul style="display:block;font-size:23px;padding:5px">
 									<li>Rather than using UI, we can also yml and json files to provision Grafana with datasources and dashboards</li>
 									<li>We can test new dashboard first on dev or testbed, then import newly created dashboard to production.</li>
 										<ul>
@@ -298,7 +298,7 @@
 						<section class="slidescustom">
 							<h3>Alerting</h3>
 							<div class="row" style="width: 100%;">
-								<ul style="display:block;font-size:18px">
+								<ul style="display:block;font-size:23px">
 									<li>Alerting Rules in Prometheus Server</li>
 									<li>Alertmanager</li>
 								</ul>
@@ -378,11 +378,13 @@
 								<section class="slidescustom">
 									<h3>Demo</h3>
 									<div class="column" style="width: 100%;">
-										<ul style="display:block;font-size:18px;padding:5px">
+										<ul style="display:block;font-size:23px;padding:5px">
+											<p>
 											<li>Monitor SOA API</li>
 											<li>Monitor MySQL Database</li>
 											<li>Monitor server hardware</li>
 											<li>Send Alert to telegram</li>
+											</p>
 										</ul>
 									</div>
 								</section>
